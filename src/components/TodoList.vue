@@ -5,7 +5,7 @@
         <li class="list-group-item">
           <strong> 할일 목록 </strong>
           <span
-            v-if="props.count >= 2"
+            v-if="count >= 2"
             class="float-end badge btn btn-success"
             @click="$emit('delete-all')"
           >
