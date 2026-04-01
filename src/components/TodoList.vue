@@ -5,7 +5,7 @@
         <li class="list-group-item">
           <strong> 할일 목록 </strong>
           <span
-            v-if="count >= 2"
+            v-if="props.count >= 2"
             class="float-end badge btn btn-success"
             @click="$emit('delete-all')"
           >
@@ -31,6 +31,7 @@ export default {
   components: { TodoListItem },
   props: {
     todoList: { type: Array, required: true },
+    count: { type: Number, required: true },
   },
   emits: ['toggle-completed', 'delete-todo', 'delete-all'],
 };
